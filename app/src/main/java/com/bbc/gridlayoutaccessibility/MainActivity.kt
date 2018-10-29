@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
-        recyclerView.layoutManager = GridLayoutManager(this, 3, GridLayoutManager.HORIZONTAL, false)
         val things = listOf(Thing("apple"), Thing("banana"), Thing("cherry"), Thing("dumbfruit"), Thing("elephantfruit"), Thing("fig"), Thing("guava"))
+        recyclerView.layoutManager = GridLayoutManager(this, 3, GridLayoutManager.HORIZONTAL, false)
         recyclerView.adapter = GridAdapter(things)
     }
 }
